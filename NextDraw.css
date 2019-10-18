@@ -1,0 +1,45 @@
+body {background-color:black;}
+#layout {
+    padding:20px 50px;
+}
+#header {
+    font-family: 'Mansalva', cursive;
+    text-align: center;
+    border: 3px solid black; border-radius:20px;
+    background-color:lightgrey;
+    margin-top:30px;
+}
+#login {
+    text-align:center;
+    margin:10px;
+}
+nav {
+    border-radius:20px;
+    background-color:lightgrey;
+    margin-bottom:10px;
+     
+    padding:10px;
+}
+aside {
+    display: inline-block;
+    width:24%;
+}
+.add {
+    border:3px solid white;
+    
+}
+.main {
+    display:inline-block;
+    background-color:lightgrey;
+    height:70%;
+    color:white;
+    width:75%;
+    border-radius:20px;
+    
+}
+footer {
+    background-color:grey;
+    border-radius:20px;
+    color:white;
+    margin-top:10px;
+}
