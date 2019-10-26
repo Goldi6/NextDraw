@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="NextDraw.css" rel="stylesheet" />
+    <title>Next Draw</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 </head>
 <body>
@@ -13,16 +16,84 @@
                 <h1>
                     <b>NEXT DRAW!</b>
                 </h1>
+
             </div>
-            <div id="login">
-                <button>Log in</button>
-                <button>Sign up</button>
+            <hr />
+            <div id="members">
+                <button type="button" id="signinbtn"><b>Sign in</b></button>
+                <div id="signinmodal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a href="#"><span id="span1" class="close1">&times;</span></a>
+                            <br />
+                            <h3>Sign in</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label for="email">Email</label>
+                                <div class="inputfrm">
+                                    <input type="email" id="email" class="input" placeholder="Enter your email" required />
+                                </div>
+                                <br />
+                                <label for="password">Password</label>
+                                <div class="inputfrm">
+                                    <input type="password" id="password" class="input" placeholder="Enter your password" required />
+                                </div>
+                                <input type="checkbox" name="saveuser" value="saveme" class="saveme" /><span class="saveme">Save me</span>
+                                <div class="modal-footer">
+                                    <input type="submit" class="submit" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="signupbtn"><b>Sign Up</b></button>
+                <div id="signupmodal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span id="span2" class="close2">&times;</span>
+                            <br />
+                            <h3>Sign Up</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <label for="name">Name</label>
+                                <div class="inputfrm"> <input type="text" id="name" class="input" placeholder="Enter your name" required /></div>
+                                <br />
+                                <label for="email">Email</label>
+                                <div class="inputfrm">
+                                    <input type="email" id="email" class="input" placeholder="Enter your email" required />
+                                </div>
+                                <br />
+                                <label for="password2">Password</label>
+                                <div class="inputfrm">
+                                    <input type="password" id="password2" class="input" placeholder="Enter your password" required />
+                                </div>
+                                <br />
+                                <label for="confirmpasswoord">Confirm password</label>
+                                <div class="inputfrm">
+                                    <input type="password" id="confirmpassword" class="input" placeholder="Confirm password" required />
+                                </div>
+
+                                <div class="modal-footer">
+                                    <input type="submit" class="submit" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </header>
+        <hr />
         <nav>
-            <button>Home</button>
-            <button>My Gallery</button>
-            <button>Liderboard</button>
+            <button class="menubtn">Home</button>
+            <button class="menubtn">My Gallery</button>
+            <!--<button>My Music</button>-->
+            <button class="menubtn">Leaderboard</button>
+
         </nav>
         <div class="main">
             body
@@ -32,8 +103,42 @@
         </aside>
 
         <footer>
-            footer
+            <button id="contactus">Contact us</button>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        var modal1 = document.getElementById("signinmodal");
+        var btn1 = document.getElementById("signinbtn");
+        var span1 = document.getElementsByClassName("close1")[0];
+        btn1.onclick = function () {
+            modal1.style.display = "block";
+        }
+        span1.onclick = function () {
+            modal1.style.display = "none";
+
+
+            //Deleted this block off code to make the button to work.
+            /*
+            window.onclick = function (event) {
+                modal.style.display = "none"
+            }
+            */
+        }
+
+        var modal2 = document.getElementById("signupmodal");
+        var btn2 = document.getElementById("signupbtn");
+        var span2 = document.getElementsByClassName("close2")[0];
+        btn2.onclick = function () {
+            modal2.style.display = "block";
+        }
+        span2.onclick = function () {
+            modal2.style.display = "none"
+        }
+
+
+    </script>
 </body>
 </html>
