@@ -1,68 +1,127 @@
-body {background-color:black;}
+body {
+    background-color: black;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
 hr {
-    border-top: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
 }
+
 #layout {
-    padding:10px 50px;
+    padding: 10px 20px;
+    font-family: 'Mansalva', cursive;
+    font-size:18px;
 }
+/*HEADER*/
 #header {
     font-family: 'Mansalva', cursive;
     text-align: center;
-    border: 3px solid black; border-radius:20px;
+    border: 3px solid white; border-radius:20px;
     
     margin-top:30px;
     color:white;
 }
-.menubtn {
-    margin: 10px;
-    padding: 5px;
-    width: 100px;
-    color: white; 
-    background: radial-gradient(rgb(50, 140, 168), rgb(66, 50, 168));
-    border-radius:10px;
+/*
+.login-links {
+    color: red;
+}*/
+
+#signin-btn, #signup-btn {
+    background: none;
+    border: none;
+    color: white;
+    margin: 0 auto;
 }
 
-
-
-nav {
-    border-radius:20px;
+#menunav {
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
     
-    margin-bottom:10px;
-     
+    /*transition: all .5s linear;*/
+}
+
+.menubtn {
+    cursor:pointer;
+    margin: 10px;
+    padding: 5px;
+    width: 120px;
+    color: white;
+    background: radial-gradient(rgb(50, 140, 168), rgb(66, 50, 168));
+    border-radius: 10px;
+}
+
+.active {
+    background: greenyellow;
+    color: blue;
+}
+.menubtn:hover {
+    background:black;
+}
+/*MAIN PART STYLE*/
+
+.main {
+    display:inline-block;
+    background-color:rgba(82, 7, 7,0.7);
+    height:200%;
+    color:white;
+    width:65%;
+    border-radius:20px;
     padding:10px;
+    
 }
 aside {
     display: inline-block;
-    width:24%;
-}
-.add {
-    border:3px solid white;
+    width: 17%;
+    height: 450px;
+    border-radius: 20px;
+    border: solid rgb(41, 43, 44) 5px;
+    word-break: normal;
     
+ 
+    position: sticky;
+    top: 85px;
+    padding: 5px 15px;
 }
-.main {
-    display:inline-block;
-    background-color:rgba(255, 0, 0,0.7);
-    height:70%;
-    color:white;
-    width:73%;
-    border-radius:20px;
-    padding:10px;
+
+
+.infoaside {
     
+    float: left;
+    margin-right:5px;
+ 
+
 }
+#addsaside {
+    float: right;
+    margin-left: 5px;
+}
+
+/*FOOTER*/
 footer {
-    background-color:grey;
-    border-radius:20px;
-    color:white;
-    margin-top:10px;
-    padding:10px;
+    background-color: grey;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
     
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
 #contactus {
     background:none;
     border:none;
 
 }
-/* The Modal (background) */
+
+
+/*The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -77,6 +136,7 @@ footer {
     
    
 }
+/*LOGIN*/
 #members {
     text-align:center;
 }
@@ -101,13 +161,19 @@ footer {
     padding: 20px;
     position: absolute;
 }
-
-input {
+/*
+//input {
+//    width: 50%;
+//    display: block;
+//    margin: 15px auto;
+//}*/
+.login {
     width: 50%;
     display: block;
     margin: 15px auto;
+    border-radius:5px;
+    
 }
-
 .close {
     position: absolute;
     top: 0;
@@ -116,15 +182,55 @@ input {
     cursor: pointer;
 }
 
-#signin-btn, #signup-btn {
-    background: none;
-    border: none;
-    color: white;
-    margin: 0 auto;
-}
 
+.rememberme {
+    //display:inline;
+}
 
 
 .saveme {
     margin:10px 3px;
 }
+
+.reg-input {
+    float: right;
+    border-radius: 5px;
+}
+.input-group {
+    margin:20px;
+}
+.affix   {
+    top: 5px;
+    z-index: 9999 !important;
+    width:100%;
+}
+
+    .affix + .container-fluid {
+        padding-top: 70px;
+    }
+    /*inner page*/
+.inner-page {
+    margin:20px; 
+    border:solid white 1px;">
+}
+
+    /*gallery*/
+    #galleryhdr {
+        display:inline-block;
+        padding-bottom: 0 ; /*doesnt work*/
+        margin-right: 20px;
+    }
+    #gallery-nav {
+        color:darkslategray;
+        display:inline-block;
+        
+    }
+    #gallery-nav > buttons {
+        margin-bottom: 5px;
+    }
+    .createAlbum {
+        border: none;
+        background-color:none;
+        color:yellow;
+    }
+    

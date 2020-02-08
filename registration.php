@@ -3,7 +3,7 @@
 <html>
 <head>
   <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="NextDraw.css"/>
 </head>
 <body>
   <div class="header">
@@ -12,28 +12,41 @@
 	
   <form method="post" action="registration.php">
   	<?php include('errors.php'); ?>
-  	<div class="input-group">
+	<div id="reg-window" style="width:45%;">
+  	<div class="input-group" >
   	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+  	  <input type="text" name="username" value="<?php echo $username; ?>" class="reg-input" >
   	</div>
-  	<div class="input-group">
+  	<div class="input-group" >
   	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" name="email" value="<?php echo $email; ?>" class="reg-input" >
   	</div>
-  	<div class="input-group">
+  	<div class="input-group" >
   	  <label>Password</label>
-  	  <input type="password" name="password_1">
+  	  <input type="password" name="password_1" class="reg-input" >
   	</div>
-  	<div class="input-group">
+  	<div class="input-group" >
   	  <label>Confirm password</label>
-  	  <input type="password" name="password_2">
+  	  <input type="password" name="password_2" class="reg-input" >
   	</div>
+	</div>
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">Register</button>
   	</div>
   	<p>
-  		Already a member? <a href="login.php">Sign in</a>
+  		Already a member? <button type="button" id="signin-btn2">Sign in</button>
   	</p>
+	
   </form>
+  <script>
+		
+		document.getElementById('signin-btn2').addEventListener('click',function() {
+			document.querySelector('.bg-modal').style.display = 'flex';
+			
+		});
+		document.querySelector('.close').addEventListener('click',function() {
+			document.querySelector('.bg-modal').style.display = 'none'
+		});
+	</script>
 </body>
 </html>
